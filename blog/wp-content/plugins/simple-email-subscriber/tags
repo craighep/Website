@@ -1,0 +1,64 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+SES_EMAIL_SENT_META	define.php	/^define('SES_EMAIL_SENT_META', 'post_email_sent_on_publish');$/;"	d
+SES_PLUGIN_VERSION	define.php	/^define('SES_PLUGIN_VERSION', "1.5");$/;"	d
+SIMPLE_EMAIL_SUBSCRIBER_DB_NAME	define.php	/^define('SIMPLE_EMAIL_SUBSCRIBER_DB_NAME', $wpdb->prefix."email_subscription");$/;"	d
+SIMPLE_EMAIL_SUBSCRIBER_PLUGIN_DIR	define.php	/^define('SIMPLE_EMAIL_SUBSCRIBER_PLUGIN_DIR', plugin_dir_path(__FILE__));  \/\/plugin dir$/;"	d
+SIMPLE_EMAIL_SUBSCRIBE_LOCATION	define.php	/^define('SIMPLE_EMAIL_SUBSCRIBE_LOCATION', 'http:\/\/wordpress.org\/extend\/plugins\/');$/;"	d
+__construct	includes/options_page.php	/^  function __construct(){$/;"	f
+action_url	admin_pages/admin_page.php	/^  $action_url=home_url().$_SERVER['REQUEST_URI'];$/;"	v
+action_url	includes/widget.php	/^    $action_url=home_url().$_SERVER['REQUEST_URI'];$/;"	v
+activate	includes/widget.php	/^  function activate(){$/;"	f
+add_subscription	includes/email_subscriber.php	/^  function add_subscription($email){$/;"	f
+admin_menu	includes/options_page.php	/^  function admin_menu(){$/;"	f
+blog_name	includes/email_subscriber.php	/^    $blog_name = stripslashes ( get_option('blogname') );$/;"	v
+cate_arg	admin_pages/subscription_widget.php	/^  $cate_arg = array("hide_empty" => 0,$/;"	v
+categories	admin_pages/subscription_widget.php	/^  $categories = get_categories($cate_arg);$/;"	v
+check_email_is_valid	includes/form_processor.php	/^  static function check_email_is_valid($email){$/;"	f
+control	includes/widget.php	/^  function control(){$/;"	f
+data	admin_pages/control_page.php	/^  $data = get_option('simple_email_subscription_widget');$/;"	v
+data	admin_pages/subscription_widget.php	/^  $data = get_option('simple_email_subscription_widget');$/;"	v
+data	includes/email_subscriber.php	/^      $data = get_option('simple_email_subscription_widget');$/;"	v
+data	includes/widget.php	/^    $data = array( 'ses_subscription_hint' => 'Enter email to subscribe: ', 'ses_success_msg' => 'Your email subscription has now been set, you will get the latest updates whenever we have a new post !');$/;"	v
+deactivate	includes/widget.php	/^  function deactivate(){$/;"	f
+email_address	includes/form_processor.php	/^      $email_address = $_POST['new_subscription_email'];$/;"	v
+email_address	includes/form_processor.php	/^      $email_address = $_POST['unsubscribe_email'];$/;"	v
+email_content	includes/email_subscriber.php	/^      $email_content = get_the_author_meta( 'display_name', $post->post_author )." has published a new post on $blog_name: ".$post->post_title;$/;"	v
+email_not_subscribed	includes/email_subscriber.php	/^  function email_not_subscribed($email){$/;"	f
+email_regex	includes/form_processor.php	/^    $email_regex = "\/^[-a-z0-9_+\\.]+\\@([-a-z0-9]+\\.)+[a-z0-9]{2,4}$\/i";  \/\/the syntex check for email$/;"	v
+email_subscriber	includes/email_subscriber.php	/^class email_subscriber{$/;"	c
+email_title	includes/email_subscriber.php	/^    $email_title = "$blog_name: new post published";$/;"	v
+fetch_subscription_list	includes/email_subscriber.php	/^  function fetch_subscription_list(){$/;"	f
+form_validator	includes/form_processor.php	/^class form_validator{$/;"	c
+from_email	includes/email_subscriber.php	/^    $from_email = get_option('admin_email' );$/;"	v
+headers	includes/email_subscriber.php	/^    $headers  = "MIME-Version: 1.0 \\r\\n";$/;"	v
+install_database	includes/email_subscriber.php	/^  static function install_database() {$/;"	f
+install_simple_subscriber_plugin	simple_email_subscriber.php	/^function install_simple_subscriber_plugin(){$/;"	f
+notification_email_sent	includes/email_subscriber.php	/^    $notification_email_sent = get_post_meta($post_id,SES_EMAIL_SENT_META, true);$/;"	v
+on_publish_post	includes/email_subscriber.php	/^  function on_publish_post($post_id){$/;"	f
+options_page	includes/options_page.php	/^class options_page {$/;"	c
+options_page	simple_email_subscriber.php	/^  $options_page = new options_page();$/;"	v
+post	includes/email_subscriber.php	/^    $post = get_post($post_id);$/;"	v
+process_form	includes/form_processor.php	/^  static function process_form($success_msg=""){$/;"	f
+register	includes/widget.php	/^  function register(){$/;"	f
+remove_subscription	includes/email_subscriber.php	/^  function remove_subscription($email){$/;"	f
+rows_affected	includes/email_subscriber.php	/^    $rows_affected = $wpdb->insert(SIMPLE_EMAIL_SUBSCRIBER_DB_NAME, array('email' => $email));$/;"	v
+rows_affected	includes/email_subscriber.php	/^    $rows_affected = $wpdb->query($wpdb->prepare("DELETE FROM ".SIMPLE_EMAIL_SUBSCRIBER_DB_NAME$/;"	v
+settings_page	includes/options_page.php	/^	function  settings_page () {$/;"	f
+setup_plugin_actions	simple_email_subscriber.php	/^function setup_plugin_actions(){$/;"	f
+simple_email_subscriber	admin_pages/admin_page.php	/^  $simple_email_subscriber = new email_subscriber();$/;"	v
+simple_email_subscriber	simple_email_subscriber.php	/^    $simple_email_subscriber = new email_subscriber();$/;"	v
+simple_email_subscription_widget	includes/widget.php	/^class simple_email_subscription_widget {$/;"	c
+sql	includes/email_subscriber.php	/^    $sql = "CREATE TABLE IF NOT EXISTS ".SIMPLE_EMAIL_SUBSCRIBER_DB_NAME."($/;"	v
+subscriber	includes/form_processor.php	/^    $subscriber = new email_subscriber();$/;"	v
+subscriber	includes/widget.php	/^    $subscriber = new email_subscriber();$/;"	v
+subscription_list	admin_pages/admin_page.php	/^  $subscription_list = $simple_email_subscriber->fetch_subscription_list();$/;"	v
+subscription_list	includes/email_subscriber.php	/^    $subscription_list = $this->fetch_subscription_list();$/;"	v
+subscription_list	includes/email_subscriber.php	/^    $subscription_list = $wpdb->get_results($/;"	v
+subscription_list	includes/email_subscriber.php	/^    $subscription_list = $wpdb->get_results($wpdb->prepare($/;"	v
+uninstall_simple_subscriber_plugin	simple_email_subscriber.php	/^function uninstall_simple_subscriber_plugin(){$/;"	f
+widget	includes/widget.php	/^  function widget($args){$/;"	f
