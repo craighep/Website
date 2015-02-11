@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/ico" href="favicon.ico">
+
+  <title>Escape The Cave</title>
+  <link href="css/game.css" type="text/css" rel="stylesheet">
+  <link href="css/main.css" type="text/css" rel="stylesheet">
+  
+				<!--Start_Page_Scripts-->
+  <script type="text/javascript" src="scripts/site/jquery.min.js">
+</script>
+  <script type="text/javascript" src="scripts/site/jquery.scrollTo-min.js">
+</script>
+  <script type="text/javascript" src="scripts/site/jquery.localscroll-min.js">
+</script>
+  <script type="text/javascript" src="scripts/site/init.js">
+</script>
+		     	<!--End_Web_Page_Scripts-->
+
+				<!--Start_Game_Scripts-->
+  <script type="text/javascript" src="scripts/game/main.js">
+</script>
+  <script type="text/javascript" src="scripts/game/menu.js">
+</script>
+				<!--End_Game_Scripts-->
+</head>
+
+<body>
+  <div id="header_wrapper">
+    <div id="header">
+      <a href="index.html"><img src="images/logo.png" class="logo" alt="logo"></a>
+
+      <div id="site_title">
+        <a href="http://craighep.co.uk">Craig Mathew Heptinstall's:</a>
+      </div>
+
+      <p id="intro_text"><a href="#game" onclick="mute(false)"><em>'ESCAPE THE
+      CAVE'</em></a></p>
+    </div>
+  </div>
+
+  <div id="main_wrapper">
+    <div id="text"></div>
+
+    <div id="main">
+      <div id="content">
+        <div id="home" class="section">
+          <ul id="menu">
+            <li><a href="#about" class="about"><span>About</span></a></li>
+
+            <li><a href="#instructions" class=
+            "instructions"><span>Instrcutions</span></a></li>
+
+            <li><a href="#game" onclick="mute(false)" class=
+            "game"><span>Game</span></a></li>
+
+            <li><a href="#other" class="other"><span>Other</span></a></li>
+          </ul><a href="#about" class="page_nav_btn next">Next</a>
+        </div>
+
+        <div class="section" id="about">
+          <h1>About This Game</h1>
+
+          <p>Welcome to my assignment solution for CS25210, and more importantly, the
+          site holding my created Javascript game 'ESACPE THE CAVE'. Here you will find
+          some introductory information about the game, along with any instructions
+          available <a href="#game" onclick="mute(false)">here</a>. On the game page
+          itself I have tried to keep it as simple as possible, with the canvas itself
+          being placed within a retro style console, incorporating directional buttons
+          along with the keyboard ones available. A short '<a href="#other">other</a>'
+          section is available on the last page explaining any known issues with the
+          game, along with links to other works of mine in the module.</p>
+          <hr>
+
+          <p>I would just like to add some credits to this page where nessecary:</p>
+
+          <div class="half left">
+            Game Credits:
+
+            <p>I would firstly like a credit the <a href=
+            "http://www.nosoapradio.us/">nosoapradio.us/</a> site for the music used
+            within my game. This site had thousands of free music pieces especially for
+            games.<br>
+            All other images, Javascript was created and written by my self with the
+            assistance of a blog regarding local storage: <a href=
+            "http://blog.ecofic.com/?p=903">blog.ecofic.com/?p=903</a></p>
+          </div>
+
+          <div class="half right">
+            Site Credits:
+
+            <p>This site uses a Jquery scroller implemented from <a href=
+            "http://flesler.blogspot.com">Ariel Flesler</a> along with the Jquery.min
+            script widley used from <a href="http://jquery.com">Jquery.com</a>.</p>
+          </div><a href="#home" class="home_btn">home</a> <a href="#home" class=
+          "page_nav_btn previous">Previous</a> <a href="#instructions" class=
+          "page_nav_btn next">Next</a>
+        </div>
+
+        <div class="section" id="instructions">
+          <h1>Instructions</h1>
+
+          <div class="half left">
+            <p><em>Hopefully This page will allow you to understand the simple rules and
+            methods of using the game based on the instructions provided here. <b>As a
+            quick note, there is also a section within my game allowing you to view some
+            basic instructions if you want to jump straight in...</b></em></p>
+
+            <p>The rules are easy! Imagine this, you're a square. Scared yet? well you
+            will be now. You seemed to have been trapped in a cave somewhere, where you
+            can see an exit, there's just one problem. Each cave has a set of walls
+            preventing you from just sliding up to the exit. The only way out is around
+            the walls to find a route that gets you round the caves maze.<br>
+            <em>Along your journey you will find water hazards that cause death, keys
+            that unlock doors, and many, many walls.</em></p>
+          </div>
+
+          <div class="half right">
+            <div class="img_border"><img src="images/example.png" width="350" height=
+            "220" alt="example"></div>
+
+            <p><b>Move around using the 'W A S D' keys or use the arrow buttons on screen
+            to slide your player around the maze!</b></p>
+          </div><a href="#home" class="home_btn">home</a> <a href="#about" class=
+          "page_nav_btn previous">Previous</a> <a href="#game" onclick="mute(false)"
+          class="page_nav_btn next">Next</a>
+        </div>
+
+        <div class="game_section">
+          <div id="game">
+            <img id="game_image" src="images/game.png" alt="Pulpit rock" width="934"
+            height="800">
+
+            <div id="up">
+              <button type="submit" class="arrow" onclick=
+              "doKeyDown(38)">&#8593;</button>
+            </div>
+
+            <div id="down">
+              <button type="submit" class="arrow" onclick=
+              "doKeyDown(40)">&#8595;</button>
+            </div>
+
+            <div id="left">
+              <button type="submit" class="arrow" onclick=
+              "doKeyDown(37)">&#8592;</button>
+            </div>
+
+            <div id="right">
+              <button type="submit" class="arrow" onclick=
+              "doKeyDown(39)">&#8594;</button>
+            </div>
+
+            <div id="container">
+			<canvas id="canvas" width="300" height="200">This text is displayed if your browser does not support HTML5 Canvas.</canvas>
+
+              <menu id="controls"></menu>
+            </div>
+
+            <div id="pause_area"></div>
+
+            <div id="moves"></div>
+          </div><a href="#home" onclick="mute(true)" class="home_btn">home</a> <a href=
+          "#instructions" onclick="mute(true)" class="page_nav_btn previous">Previous</a>
+          <a href="#other" onclick="mute(true)" class="page_nav_btn next">Next</a>
+        </div>
+
+        <div class="section" id="other">
+          <h1>Other</h1>
+
+          <p><em>A little section about my other work in this module, and the background
+          details of this game...</em><br></p>
+          <hr>
+
+          <div class="half left">
+            First things first. Throughout this module I have learnt a great deal about
+            the use of the HTML5 Canvas element. This knowledge and learning has enabled
+            me to try out and test what can be done with the canvas. Some of the work I
+            have completed during this module includes:<br>
+
+            <ul>
+             
+              <li><a href="other/house.html">Build A House</a> - My creation of a house
+              using vectors drawn and transformed around the canvas.</li>
+
+              <li><a href="other/index.html">Load Spinner</a> - A simple loading effect 
+			  using the canvas constructed in my free time. Draws a circle repeatedly 
+			  to give the effect of the circle being complete. (Just look at it to 
+			  get what I mean).</li>
+			  
+			  <li><a href="other/tweet/index.html">JQuery Tweet Grabber</a> - A twitter-tweet 
+			  grabber using a JQuery library, also using CSS to bring live tweets into 
+			  a pretty box.</li>
+
+			  <li><a href="other/JQuery.html">JQuery Document Changer</a> - An already 
+			  changed webpage using JQuery with an optional button to change the 
+			  document further live.</li>
+			  
+			  <li><a href="other/whack.html">Whack A Kitty</a> - A simple game of cats,
+              clicking as many as possible before the time runs out!</li>
+
+
+            </ul>
+          </div>
+
+          <div class="half right">
+            <h3>A bit of detail into the game</h3><em>I feel that I should clarify and
+            talk about any key Javascript code I used here, which will also support my
+            documentation for part two of this assignment</em><br>
+            <hr>
+            Because Google chrome complains if you use the same Image item (This was to
+            hold the maps which would be reloaded each level) and re use it. By telling
+            chrome the image had '.crossOrigin = 'anonymous' ', the problem went away.
+            The only issue caused from this is that if say I wanted to run the game
+            offline in chrome, the crossOrigin function only works online resulting in 
+            chrome not working offline.<br>
+            <hr>
+            Using the w,a,s,d options on the keyboard to move the player around maps was 
+            something I chose based on a lot of issues with the up, down, left and right 
+            arrows usually used for such a game. I knew that changing the default method 
+            should have prevented my game from moving the page around, but found that 
+            the way my action listener for the keyboard was implemented, It did not 
+            allow me to add this action without having the keyboard doing nothing. 
+            Therefore I settled for the w,a,s,d methods along with the button options 
+            on top of the game.
+            <hr>
+            At the start of implementing the maps for my game, I did consider creating 
+            each level using a range of vectors as I knew the benefits of this would be 
+            ideal. It would save space, speed and would be easier to personalise each 
+            level. The choice for simply creating this as PNG files then loading them 
+            was due to a time constraint, along with the amount of code that would be 
+            required to create each level. To try stop speed problems, I made the maps 
+            as low resolution as possible. This teamed with the 'onload' code ensured 
+            that these files caused no problems.            
+                    
+          </div><a href="#home" class="home_btn">home</a> <a href="#game" onclick=
+          "mute(false)" class="page_nav_btn previous">Previous</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer_wrapper">
+    <div id="footer">
+      Copyright &#169; 2013 <a href="#home" onclick="mute(true)">Craig Mathew
+      Heptinstall</a> | Designed by <a href="http://www.craighep.co.uk">Craig Heptinstall</a>
+      |
+
+      <p><a href="http://validator.w3.org/check/referer"><img style=
+      "border:0;width:70px;height:80px" src="images/html.png" alt=
+      "Valid HTML5!"></a>&amp; <a href=
+      "http://jigsaw.w3.org/css-validator/check/referer"><img style=
+      "border:0;width:70px;height:80px" src="images/css.png" alt="Valid CSS!"></a></p>
+    </div>
+  </div><script type="text/javascript">
+			var canvas;
+			var ctx; /// context on canvas
+			var dx = 3; //difference in x when moving
+			var dy = 3; // same for y
+			var x = 148; //starting point for object
+			var y = 130; //same for y
+			var WIDTH = 300; //canvas width
+			var HEIGHT = 200; // canvas hieght
+			var check = 0; // check for stopping multiple actions at same time
+			var speed = 3; ///speed of refreshin movement of block(3 is optimum)
+			var level = 0; // level to begin on
+			var moves = 0; // records moves for each level
+			var water_count = 0; // records how many water touches per level
+			var paused = false;
+			var in_game = false;
+			var moving = false;
+			var speech = new Array();
+			speech[0] = '"Where Am I?"';
+			speech[1] = '"Its Awfully Dark In Here..."';
+			speech[2] = '"Better Not Get Lost..."';
+			speech[3] = '"What Is The Point Of All This?!"';
+			speech[4] = '"That Water Looks Dangerous.."';
+			speech[5] = '"Great, More Water."';
+			speech[6] = '"Theres No Door? Wait, What' + "'" + 's That?"';
+			speech[7] = '"Ahhh I See...."';
+			speech[8] = "'Is that the exit?'";
+			speech[9] = "'Freedom!'";
+			var award = new Array("level0l.png", "level0l.png", "level0l.png", "level0l.png", "level0l.png", "level0l.png", "level0l.png", "level0l.png", "level0l.png");
+
+			if (localStorage.getItem("achv") === null) {
+			    var achievements = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0); // indidcates if each achievement is done (1 = done)
+			    localStorage["achv"] = JSON.stringify(achievements); // re-store achievements in localStorage overwriting them
+			}
+			var achv = JSON.parse(localStorage["achv"]);
+
+			if (localStorage.getItem("levels_s") === null) {
+			    var level_array = new Array(0, 3, 3, 3, 3, 3, 3, 3, 3); // indicating whether they are locked, done, not done, or perfectly done
+			    // 0- open
+			    // 1= perfect
+			    // 2=done
+			    // 3= locked    
+			    localStorage["levels_s"] = JSON.stringify(level_array); 
+			}
+			var perfectLevels = JSON.parse(localStorage["levels_s"]);
+
+			var perfectMoves = new Array(1, 6, 14, 8, 16, 13, 2, 8, 24); // perfect moves required on each level
+			
+			var achiev_text = new Array();
+			achiev_text[0] = "Complete a level";
+			achiev_text[1] = "Complete one level in perfect moves";
+			achiev_text[2] = "Complete 3 levels in perfect moves";
+			achiev_text[3] = "Complete a level in over 20 moves";
+			achiev_text[4] = "Lose a level by touching water";
+			achiev_text[5] = "Touch water twice in a level";
+			achiev_text[6] = "Complete 5 levels in perfect moves";
+			achiev_text[7] = "Complete the game";
+			achiev_text[8] = "Complete all levels in perfect moves";
+			achiev_text[9] = "Click an achievement to view the desciption!";
+			
+			canvas = document.getElementById("canvas"); //create canvas
+			ctx = canvas.getContext("2d"); //declare 2d
+			clear(); //refresh canvas
+			
+			window.addEventListener('keydown', doKeyDown, true); // listen for key presses
+			var a = new Audio('sounds/DST_TempleOfRecourse.wav'); 
+			a.onload = function () {
+			}
+			var b = new Audio('sounds/DST_TacticalSpace.wav');
+			a.onload = function () {
+			}
+			var c = new Audio('sounds/Short_triumphal_fanfare_John_Stracke_815794903.wav');
+			a.onload = function () {
+			}
+			var muted = false;
+			mute();
+			
+			Map = new Image();
+			Map.crossOrigin = "anonymous"; // For chrome, allows different maps in Image object
+			Map.src = "images/menu2.jpg";
+			Map.onload = function () {
+			    ctx.drawImage(Map, 0, -2, 300, 200);
+			    menu();
+			}
+  </script>
+  
+  <script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-40243550-2', 'aber.ac.uk');
+		ga('send', 'pageview');
+  </script>
+  
+</body>
+</html>

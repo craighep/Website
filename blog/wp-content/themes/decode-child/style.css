@@ -1,0 +1,10 @@
+/*
+Theme Name:     Decode Child
+Theme URI:      http://www.craighep.co.uk/blog
+Description:    Child theme for the Decode theme
+Author:         Craig Mathew Heptinstall
+Author URI:     http://www.craighep.co.uk/
+Template:       decode
+Version:        0.1.0
+*/
+@import url("../decode/style.css");

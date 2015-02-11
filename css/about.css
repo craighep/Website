@@ -1,0 +1,55 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+@media (min-width: 768px) {
+  .featurette-heading {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 50px;
+  }
+}
+
+.grow_pic img{
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+	width:458px;
+	max-width: none;
+	height:343px;	  
+		  
+}
+
+.grow_pic  img:hover {
+    width: 550px;
+	height: 420px;
+  }
+  
+  .pic_pic {
+	overflow: hidden;
+	height:343px;
+	max-width: 100%;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<link href="main.css" type="text/css" rel="stylesheet">
+	<body>
+		<canvas id="myCanvas" width="578" height="200"></canvas>
+		<hr>
+		<div id="start"><button type="submit" onclick="start_spin()">Start Spinning</button></div>
+		<script type="text/javascript">
+		var canvas = document.getElementById('myCanvas');
+		var context = canvas.getContext('2d');
+		var centerX = canvas.width / 2;
+		var centerY = canvas.height / 2;
+		var speed = 5;
+		var radius = 50;
+		var turn = 0.955;
+		var forward = true;
+		var stopped;
+		var i =0;
+	
+
+		
+		function start_spin(){
+		document.getElementById("start").innerHTML = 
+		['<button type="submit" onclick="stop()">Stop Loading</button>'];
+		stopped = false;
+		spin();
+		}
+		
+		function spin(){	
+		if(stopped != true){
+		if(forward == true){
+		clear();
+		turn += 0.001;
+		draw();
+			if(turn >2.96){
+				forward = false;
+			}
+		}
+		else{
+		turn -= 0.001;
+		clear();
+		draw();
+			if(turn < 0.955){
+				forward = true;
+			}
+		}
+
+		setTimeout(arguments.callee, speed);
+		}
+		}
+		
+		function clear() {
+	    context.clearRect(0, 0, 578, 200); // empty screen
+		}
+		
+		function draw() {
+		context.beginPath();
+		context.arc(centerX, centerY, radius, 3, turn *  Math.PI, false);
+		context.fillStyle = 'red';
+		context.fill();
+		context.lineWidth = 4;
+		context.strokeStyle = '#003300';
+		context.stroke();
+		
+		count= Math.round((turn*50)-50)+2;
+		if(count >  53){
+			context.fillStyle = 'white';
+		}
+		else{
+			context.fillStyle = 'blue';
+		}
+	    context.font = "bold 12px Arial";
+		context.fillText(count+"%", 280,110);
+		}
+		
+		function stop(){
+		document.getElementById("start").innerHTML = 
+		['<button type="submit" onclick="start_spin()">Start Loading</button>'];	
+		stopped= true;
+		}
+		</script>
+
+	</body>
+
+</html>

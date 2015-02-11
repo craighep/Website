@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My first canvas</title>
+	</head>
+	<body onLoad="draw_house()">
+
+	<h2>Rearrange the code in this page so it draws something that looks like a house</h2>
+
+	<canvas width="400" height="400" id = "house" style="border:1px dotted"></canvas>
+	<script>
+		canv=document.getElementById("house");
+		sky=canv.getContext("2d");
+				var skyx=0;	
+		        var skyy=0;	
+			sky.fillStyle="#84ECFA";
+			sky.fillRect(skyx,skyy,400,400);
+			
+				// a radiant yellow sun
+			var sun_centrex=10;
+			var sun_centrey=10;
+			var sun_radius=40;
+			sky.fillStyle="#ff0";
+			sky.beginPath();
+			sky.arc(sun_centrex, sun_centrey, sun_radius, 0, 2*Math.PI, false);
+			sky.fill();
+			sky.closePath();
+	ctx=canv.getContext("2d");	
+	for(var i=0; i<3; i++) {		
+		function draw_house() {
+		
+		
+		
+			
+			// clouds
+			var cloudx=210;
+			var cloudy=280;
+			var cloudrad=50;
+			ctx.fillStyle="white";
+			ctx.beginPath();
+			
+			ctx.closePath();
+			ctx.arc(cloudx+50, cloudy+10, cloudrad-30, 0, 2*Math.PI, false)
+			ctx.fill();
+			ctx.arc(cloudx-50, cloudy+10, cloudrad-20, 0, 2*Math.PI, false)
+			ctx.fill();
+			ctx.arc(cloudx, cloudy, cloudrad, 0, 2*Math.PI, false);
+			ctx.fill();
+			
+                        var roofbasex=140;
+                        var roofbasey=200;
+			// A nice shiny red roof
+			ctx.fillStyle="red";
+			ctx.beginPath();
+			ctx.moveTo(roofbasex,roofbasey);
+			ctx.lineTo(roofbasex+20,roofbasey-20);
+			ctx.lineTo(roofbasex+110,roofbasey-20);
+			ctx.lineTo(roofbasex+130,roofbasey);
+			ctx.closePath();
+			ctx.fill();
+			// a pale stone front
+		        var housebasex=160;	
+		        var housebasey=200;	
+			ctx.fillStyle="#cc9";
+			ctx.fillRect(housebasex,housebasey,90,90);
+
+			// a window 
+                        var windowsbasex=225;
+                        var windowsbasey=210;
+			ctx.fillStyle="#044";
+			ctx.fillRect(windowsbasex,windowsbasey,15,20);
+			
+			// another few windows 
+			ctx.fillRect(windowsbasex,windowsbasey+50,15,20);
+			ctx.fillRect(windowsbasex-50,windowsbasey,15,20);
+			ctx.fillRect(windowsbasex-50,windowsbasey+50,15,20);
+
+			
+
+			// a bright blue door
+			var doorbasex=200;
+			var doorbasey=260;
+			ctx.fillStyle="#04f";
+			ctx.fillRect(doorbasex,doorbasey,15,30);
+
+				
+
+		}
+		
+		
+		sky.translate(i,i);}
+		
+
+</script>
+</body>
+</html>
+
