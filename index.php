@@ -9,6 +9,7 @@
 			"Craig heptinstall, heptinstall, craighep, software engineer, web developer, Aberystwyth university, Java, C, C++, HTML, CSS, Javascript, php, sql" />
 	<meta name="description" content=
 			"Online portfolio site for Craig Heptinstall, Software Engineering student at Aberystwyth University" />
+    <meta name="theme-color" content="#0F60E6">
 	<!-- CSS -->
     <link rel="shortcut icon" href="favicon.ico">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,14 +19,14 @@
 	<title>Craig Heptinstall</title>
 	
 	<script type="text/javascript">
-	  var ref = document.referrer;
-	if (ref.match(/^https?:\/\/([^\/]+\.)?craighep\.co.uk(\/|$)/i)) {
-		
-	}
-	else{
-		// redirect 
-		window.location.replace("http://www.craighep.co.uk/landing");
-	}
+	    var ref = document.referrer;
+        if (ref.match(/^https?:\/\/([^\/]+\.)?craighep\.co.uk(\/|$)/i)) {
+            
+        }
+        else{
+            // redirect - Not too sure about landing pages...
+            //window.location.replace("http://www.craighep.co.uk/landing");
+        }
 	</script>
   </head>
    

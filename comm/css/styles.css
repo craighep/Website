@@ -1,0 +1,141 @@
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f2f3f7;
+    /* change if the mask should have another color then white */
+    z-index: 9999999;
+    /* makes sure it stays on top */
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #8a8b8b;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: rgba(53, 10, 4, .5);
+	background-image:url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    font-weight: normal;
+    background-position-x: 80%;
+}
+
+.bg-overlay {
+    background: url("../img/bg-overlay.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+hr {
+    color: grey;
+}
+
+.content {
+    padding: 20px;
+}
+
+body.yellow {
+    background-color: #ffcc00;
+}
+body.green {
+    background-color: #aaee06;
+}
+body.blue {
+    background-color: #00d2ff;
+}
+
+.homepage #logo {
+    margin: 0 0 26px 0;
+}
+.home {
+    background: #e6e9ed url(../img/bg-body.png) left top repeat-x;
+}
+.main-wrapper {
+    padding: 60px 60px 0 60px;
+    margin: 0 auto;
+}
+
+#randomc{
+    display: none;
+}
+
+.colorwheel_large svg {
+    z-index: 2;
+}
+
+.table-responsive
+{
+    overflow-x: auto;
+}
+.colorwheel_large {
+    margin: 0 auto;
+}
+/*Logo Start Here*/
+
+#logo {
+    text-align: center;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+#logo a {
+    display: inline-block;
+    margin-right: -10px;
+}
+
+#logo a img {
+    width: 50px;
+}
+
+#logo strong {
+    font-size: 3em;
+}
+/*Logo End Here*/
+
+.fade-down {
+    margin-bottom: 15px;
+}
+
+.box {
+    padding: 0 5px 0 5px;
+}
+
+.inner {
+    background: white;
+}
+
+/*Footer start here*/
+
+footer {
+    text-align: center;
+    font-size: 16px;
+    bottom: 0px;
+}
+.footer-text{
+	font-size: 12px;
+    color:rgb(84, 255, 0);
+}
+footer a {
+    text-decoration: none;
+    color:rgb(199, 252, 172);
+    -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+footer a:hover {
+    color: white;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+@media only screen and (min-device-width: 1150px) {
+    background-size: cover;
+}
+
