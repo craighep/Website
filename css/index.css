@@ -191,3 +191,7 @@ display: inline-block;
 .carousel_bold {
 	color:rgb(185, 190, 228)
 }
+
+.bold_white {
+    color: #fff;
+}

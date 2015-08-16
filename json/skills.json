@@ -1,0 +1,114 @@
+{
+  "skills": [
+    {
+      "language": "Java",
+      "percentage": "85",
+      "year-from": "2010"
+    },
+    {
+      "language": "C",
+      "percentage": "71",
+      "year-from": "2012"
+    },
+    {
+      "language": "C++",
+      "percentage": "55",
+      "year-from": "2013"
+    },
+    {
+      "language": "C#",
+      "percentage": "80",
+      "year-from": "2012"
+    },
+    {
+      "language": "Perl",
+      "percentage": "62",
+      "year-from": "2012"
+    },
+    {
+      "language": "HTML 5",
+      "percentage": "96",
+      "year-from": "2011"
+    },
+    {
+      "language": "CSS 3",
+      "percentage": "97",
+      "year-from": "2011"
+    },
+    {
+      "language": "SQL",
+      "percentage": "75",
+      "year-from": "2012"
+    },
+    {
+      "language": "PHP",
+      "percentage": "80",
+      "year-from": "2011"
+    },
+    {
+      "language": "ASP",
+      "percentage": "51",
+      "year-from": "2011"
+    },
+    {
+      "language": "Assembly",
+      "percentage": "48",
+      "year-from": "2012"
+    },
+    {
+      "language": "Haskell",
+      "percentage": "68",
+      "year-from": "2011"
+    },
+    {
+      "language": "Pascal",
+      "percentage": "78",
+      "year-from": "2009"
+    },
+    {
+      "language": "Unix",
+      "percentage": "62",
+      "year-from": "2011"
+    },
+    {
+      "language": "VB",
+      "percentage": "50",
+      "year-from": "2009"
+    },
+    {
+      "language": "Jquery",
+      "percentage": "82",
+      "year-from": "2012"
+    },
+    {
+      "language": "XML",
+      "percentage": "90",
+      "year-from": "2011"
+    },
+    {
+      "language": "Javascript",
+      "percentage": "98",
+      "year-from": "2010"
+    },
+    {
+      "language": "Ajax",
+      "percentage": "85",
+      "year-from": "2012"
+    },
+    {
+      "language": "Ruby (Rails)",
+      "percentage": "35",
+      "year-from": "2014"
+    },
+    {
+      "language": "Python",
+      "percentage": "48",
+      "year-from": "2014"
+    },
+    {
+      "language": "WebGL",
+      "percentage": "40",
+      "year-from": "2015"
+    }
+  ]
+}
