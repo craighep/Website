@@ -86,8 +86,16 @@
                                                         '<li><b>Score: '.$score.'</b></li></ul>'.  
                                                     '<div id="inner'.--$i.'"></div>'.
                                                     '<p>'.$project["description"].'</p>';   
-                            if($project["link"] == "")
-                                $html .= '<p><em>Sorry! Nothing to prove it here...</em>';
+                            if($project["link"] == ""){
+                                if($project["links"] == "")
+                                    $html .= '<p><em>Sorry! Nothing to prove it here...</em>';
+                                else{
+                                    $html .= '<p>';
+                                    foreach ($project["links"] as $l => $linkText){
+                                        $html .= '<a class="btn btn-default" href="'.$linkText["link"].'" target="_blank" role="button">'.$linkText["text"].' »</a>';
+                                    }
+                                }
+                            }
                             else
                                 $html .= '<p><a class="btn btn-default" href="'.$project["link"].'" target="_blank" role="button">Take a look »</a>';
                             foreach($project["languages"] as $language){    

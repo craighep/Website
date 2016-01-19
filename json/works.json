@@ -7,7 +7,16 @@
       "date": "March 2011",
       "score": "",
       "module": "High school- Starting out...",
-      "link": "",
+      "links": [
+	      	{
+	      		"text": "Dungeon Maze",
+	      		"link": "https://scratch.mit.edu/projects/282408/"
+	      	},
+	      	{
+	      		"text": "Breakout",
+	      		"link": "https://scratch.mit.edu/projects/282407/"
+	      	}
+      	],
       "languages": []
     },
     {
@@ -310,7 +319,7 @@
       "date": "June 28th 2015",
       "score": "",
       "module": "Aberystwyth Badminton Club",
-      "link": "http://www.craighep.co.uk/league",
+      "link": "http://www.aberbadminton.co.uk/league",
       "languages": [
         "javascript",
         "html",
@@ -318,6 +327,29 @@
         "mobile-device",
         "php",
         "postgres"
+      ]
+    },
+    {
+      "name": "Artificial Intelligence Ethics Paper",
+      "short": "Artificial Intelligence Paper",
+      "description": "A paper written discussing the ethical and emotional ties to the world of Artificial Intelligence. Three papers were used for the basis of the research, with each evauluated and critiqued. A general understanding of the field is provided, with some insight into the future of AI.",
+      "date": "November 5th 2015",
+      "score": "73% (1st)",
+     "module": "SEM6120- Artificial Intelligence Fundamentals",
+      "link": "https://github.com/craighep/Artificial-Intelligence-paper",
+      "languages": [
+      ]
+    },
+    {
+      "name": "Genetic Algorithm Travelling Salesman solver",
+      "short": "AI Travelling salesman",
+      "description": "The second part of om Artificial Intelligence module, I was alsked to create an application that uses a set of different genertic algorithms to attempt to find the shortest routes in any given travelling salesman problem. I selected Java as the primary language to write this in, including a GUI and capabilites to read in any set of co-ordinates from a JSON file. The paper accompyning the code explains my choices for the mutation rates, selection and crossover techniques applied to find the best and quickest calculated routes.",
+      "date": "December 9th 2015",
+      "score": "73% (1st)",
+     "module": "SEM6120- Artificial Intelligence Fundamentals",
+      "link": "https://github.com/craighep/Artificial_Intelligence_GA_TSP",
+      "languages": [
+      	"java"
       ]
     }
   ]

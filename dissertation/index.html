@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>OLAN Prototype | Craig Heptinstall</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="css/site/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/site/foundation.css" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="js/site/modernizr.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <nav class="top-bar" data-topbar role="navigation">
+            <ul class="title-area">
+                <li class="name">
+                    <h1>
+                        <a class="left-off-canvas-toggle menu-icon" href="#"><span>&#9776; Options</span></a>
+                    </h1>
+                </li>
+                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a>
+                </li>
+            </ul>
+            <section class="top-bar-section">
+                <ul class="left">
+                    <li class="divider"></li>
+                    <li class="has-form">
+                        <div class="row collapse">
+                            <div class="large-8 small-9 columns">
+                                <input type="text" disabled="disabled" id="input" placeholder="Input OLAN">
+                            </div>
+                            <div class="large-4 small-3 columns">
+                                <a id="pause" href="#" type="button" value="Pause"></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="right">
+                    <li class="divider"></li>
+                    <li>
+                        <a id="about" href="#" data-reveal-id="aboutModal">About</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a id="help" href="#" data-reveal-id="helpModal">Help</a>
+                    </li>
+                    <li class="divider"></li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+    </div>
+    <div class="row">
+        <div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
+                <aside class="left-off-canvas-menu">
+                    <ul class="off-canvas-list">
+                        <li>
+                            <label>Option Categories</label>
+                        </li>
+                        <li class="has-submenu">
+                            <li class="has-submenu">
+                                <a href="#">OLAN</a>
+                                <ul class="left-submenu">
+                                    <li class="back"><a href="#">Back</a>
+                                    </li>
+                                    <li>
+                                        <label>Shape</label>
+                                    </li>
+                                    <li>
+                                        <select id="dropdown">
+                                        </select>
+                                        <a id="addOLAN" class="button radius">Add to scenario</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="#">Physics</a>
+                                <ul class="left-submenu">
+                                    <li class="back"><a href="#">Back</a>
+                                    </li>
+                                    <li>
+                                        <label>Scale</label>
+                                    </li>
+                                    <li>
+                                        <select id="scale">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option selected>4</option>
+                                            <option>6</option>
+                                            <option>10</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label>Extrusion Segments</label>
+                                    </li>
+                                    <li>
+                                        <select id="segments">
+                                            <option>25</option>
+                                            <option>50</option>
+                                            <option selected>100</option>
+                                            <option>200</option>
+                                            <option>400</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label>Radius Segments</label>
+                                    </li>
+                                    <li>
+                                        <select id="radiusSegments">
+                                            <option cameraHelper>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>8</option>
+                                            <option>12</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label>Camera onboard View</label>
+                                    </li>
+                                    <li>
+                                        <div class="switch">
+                                            <input id="onboard" type="checkbox">
+                                            <label for="onboard"></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label>Look Ahead</label>
+                                    </li>
+                                    <li>
+                                        <div class="switch">
+                                            <input id="lookAhead" type="checkbox">
+                                            <label for="lookAhead"></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label>Camera Helper</label>
+                                    </li>
+                                    <li>
+                                        <div class="switch">
+                                            <input id="cameraHelper" type="checkbox">
+                                            <label for="cameraHelper"></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label>Animation Speed</label>
+                                    </li>
+                                    <li>
+                                        <input id="speed" type="range" value="0.005" min="0.001" max="0.01" step="0.001" />
+                                    </li>
+                                    <li>
+                                        <label>Auto Repeat</label>
+                                    </li>
+                                    <li>
+                                        <div class="switch">
+                                            <input id="repeat" type="checkbox">
+                                            <label for="repeat"></label>
+                                        </div>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="#">Save/Load</a>
+                                <ul class="left-submenu">
+                                    <li class="back"><a href="#">Back</a>
+                                    </li>
+                                    <li>
+                                        <label>Auto-save on edit</label>
+                                    </li>
+                                    <li>
+                                        <div class="switch">
+                                            <input id="autoSave" type="checkbox">
+                                            <label for="autoSave"></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label>Export</label>
+                                    </li>
+                                    <li>
+                                        <a id="export" class="button radius">Export to JSON</a>
+                                    </li>
+                                    <li>
+                                        <label>Import</label>
+                                    </li>
+                                    <li>
+                                        <input id="import" name="file" type="file" file-upload multiple/>
+                                        <img id="loading" class="hidden" src="img/loading.gif">
+                                        <div data-alert id="success" class="alert-box success radius">
+                                            Successfully imported file into scenario!
+                                            <a href="#" class="close">&times;</a>
+                                        </div>
+                                        <div data-alert id="error" class="alert-box alert radius">
+                                            Error importing file! Try again.
+                                            <a href="#" class="close">&times;</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                    </ul>
+                    <footer id="footer" class="row">
+                        Copyright ©
+                        <script type="text/javascript">
+                        document.write(new Date().getFullYear());
+                        </script>
+                        <br>
+                        <a href="http://www.craighep.co.uk">Craig Mathew Heptinstall</a>
+                    </footer>
+                </aside>
+                <div id="container">
+                    <div id="warnManoeuvres">
+                        <div data-alert class="alert-box warning round">
+                          Flight path will pass through the ground
+                          <a href="#" class="close">&times;</a>
+                        </div>
+                    </div>
+                    <a id="hideShow" class="button secondary radius">-</a>
+                    <div class="moveStrip">
+                        <ul class="moves">
+                        </ul>
+                    <a id="moveReelLeft" class="carosel hidden"><img src="img/left.png"/></a>
+                    <a id="moveReelRight" class="carosel hidden"><img src="img/right.png"/></a>
+                    </div>
+                    <div id="aboutModal" class="reveal-modal xlarge text" data-reveal>
+                        <div class="padText">
+                            <h1>About this application <a id="close"></a></h1><em>Author: Craig Heptinstall<br>
+                            Version: 1.0 Release</em>
+                            <hr>
+                            <p class="lead">This free open application is easy to use.</p>
+                            <p>This application represents my major project for university, exploring the possibility of allowing a user (primarily radio control, and real-life pilots of areobatic planes) to input a range of OLAN strings, and produce realistic flight simulations of areobatic sequences.</p>
+                            <p>This application will combine with various planning and design documents whcih can be found <b><a href="docs">here</a></b>. Alongside this, the final report for this application will be made availible here in the coming months.</p>
+
+                            <p class="lead">Work structure and methodologies</p>
+                            <p>My plan for this project consists of the use of the the FDD methodolodgy. For this, I initially created a feature list, which can be found <a href="docs/1.Dissertation requirements\Dissertation Requirements.pdf">here</a>.</p>
+
+
+                            </br>
+                            </br>
+                            <h4>Credit to these libraries and information sources(to be updated):</h4>
+                            <ul>
+                                <li>
+                                    Three.js library <a href="#cite1">[1]</a>
+                                </li>
+                                <li>
+                                    JQuery library <a href="#cite2">[2]</a>
+                                </li>
+                                <li>
+                                    Google JS Coding standards <a href="#cite3">[3]</a>
+                                </li>
+                                <li>
+                                    Foundation CSS framework <a href="#cite4">[4]</a>
+                                </li>
+                                <li>
+                                    RequireJS library <a href="#cite5">[5]</a>
+                                </li>
+                                <li>
+                                    Stats.js library <a href="#cite6">[6]</a>
+                                </li>
+                            </ul>
+                            <p>
+                                <ul class="references">
+                                    <li>
+                                        <cite id="cite1">1 Threejs</cite>, (2015). three.js - Javascript 3D library. [online] Available at: <a href="http://threejs.org">http://threejs.org</a> [Accessed 12 Jan. 2015].
+                                    </li>
+                                    <li>
+                                        <cite id="cite2">2 jQuery</cite>, j. (2015). jQuery. [online] Jquery.com. Available at: <a href="http://jquery.com">http://jquery.com</a> [Accessed 12 Jan. 2015].
+                                    </li>
+                                    <li>
+                                        <cite id="cite3">3 Google styleguide</cite>, (2015). Google Javascript coding standards. [online] Available at: <a href="https://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml">https://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml</a> [Accessed 1 Mar. 2015].
+                                    </li>
+                                    <li>
+                                        <cite id="cite4">4 Foundation css framework</cite>ZURB, i. (2015). Foundation | The Most Advanced Responsive Front-end Framework from ZURB. [online] Foundation.zurb.com. Available at: <a href="http://foundation.zurb.com">http://foundation.zurb.com</a> [Accessed 15 Feb. 2015].
+                                    </li>
+                                    <li>
+                                        <cite id="cite5">5 RequireJS</cite>, (2015). RequireJS. [online] Available at: <a href="http://requirejs.org">http://requirejs.org</a> [Accessed 9 Feb. 2015].
+                                    </li>
+                                    <li>
+                                        <cite id="cite6">6 Stats JS</cite>, (2015). Github stats js library. [online] Available at: <a href="http://www.javascriptoo.com/stats-js">http://www.javascriptoo.com/stats-js</a> [Accessed 10 Feb. 2015].
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <a class="close-reveal-modal">&#215;</a>
+                    </div>
+                    <div id="helpModal" class="reveal-modal xlarge text" data-reveal>
+                        <div class="padText">
+                            <h1>Getting started</h1>
+                            <hr>
+                            <p class="lead">A WebGL based OLAN flight path simulator.</p>
+                            <p>Type into the bar at the top of the page to create a movement onto the canvas. As more are added, the movie reel at the bottom of the page should update showing each individual manoeuvre. Afterwoods, hit play to show the animation!
+                                <br> In addition, press the '<a class="left-off-canvas-toggle" href="#">Options</a>' button to open up a range of menus affecting animation speed, physics and aeroplane attributes.
+                                <br>Note: Manoeuvre input can also allow for parameters, for increasing loop sizes, entry length or exit length of certain moves. E.g. "(1,28) t" would represent a tooth, but the start location would be the current location plus the X and Y values in the parameters.
+                                <br> The comprehensive list of possible movements are as follows:
+                            </p>
+                            <ul id="manoeuvres">
+                            </ul>
+                        </div>
+                        <a class="close-reveal-modal">&#215;</a>
+                    </div>
+                    <div style="display:none" id="nogl">
+                        <div class="padText">
+                            <h1>This browser is not comptible with WebGL, please try another.</h1>
+                            <hr>
+                            <p>Either use a supported browser (Chrome, Firefox, Opera, IE 11) or enable WebGL in the developer tools if your browser is supposed to be compatible.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="exit-off-canvas"></a>
+            </div>
+        </div>
+</body>
+
+<script src="js/libs/require/require.js"></script>
+<script src="js/libs/three/three.min.js"></script>
+<script src="js/libs/gl/matrix.min.js"></script>
+<script src="js/libs/jquery/jquery.js"></script>
+<script src="js/site/mouseHide.js"></script>
+<script src="js/site/foundation.js"></script>
+<script src="js/libs/stats/stats.min.js"></script>
+<script>
+$(document).foundation();
+var doc = document.documentElement;
+doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+<script>
+require.config({
+    baseUrl: 'js',
+});
+require(["main"]);
+</script>
+<script src="js/site/webGLCheck.js"></script>
+
+</html>

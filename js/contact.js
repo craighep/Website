@@ -9,8 +9,9 @@
  * @var {String} recaptcha_id
  */
 var recaptcha_id;
-
-setupInputListeners();
+$(document).ready(function(){
+    setupInputListeners();
+});
 
 /**
  * Called on load of google captcha. Generates the unique captcha id.
@@ -19,9 +20,9 @@ setupInputListeners();
  *
  */
 function onloadCallback() {
-        recaptcha_id = grecaptcha.render('html_element', {
-            'sitekey': '6Lef-QYTAAAAADthPqJAQwL6DdHJrOGfamA9iPH8'
-        });
+    recaptcha_id = grecaptcha.render('html_element', {
+        'sitekey': '6Lef-QYTAAAAADthPqJAQwL6DdHJrOGfamA9iPH8'
+    });
 }
 
 /**
@@ -31,10 +32,10 @@ function onloadCallback() {
  *
  */
 function writeNew() {
-        grecaptcha.reset(recaptcha_id);
-        $("#contact").show();
-        $("#thanks").hide();
-        reset();
+    grecaptcha.reset(recaptcha_id);
+    $("#contact").show();
+    $("#thanks").hide();
+    reset();
 }
 
 /**
@@ -44,14 +45,14 @@ function writeNew() {
  *
  */
 function reset() {
-        document.getElementById("email").value = '';
-        document.getElementById("author").value = '';
-        document.getElementById("text").value = '';
-        $('#author').removeClass( "valid" );
-        $('#email').removeClass( "valid" );
-        $('#text').removeClass( "valid" );
-        $('#replaceme').hide();
-        return false;
+    document.getElementById("email").value = '';
+    document.getElementById("author").value = '';
+    document.getElementById("text").value = '';
+    $('#author').removeClass( "valid" );
+    $('#email').removeClass( "valid" );
+    $('#text').removeClass( "valid" );
+    $('#replaceme').hide();
+    return false;
 }
 
 /**
@@ -101,6 +102,7 @@ function showMessage(text) {
  *
  */
 function loadXMLDoc() {
+    $('#spinner').show();
     var googleCode = grecaptcha.getResponse(recaptcha_id);
     var xmlhttp;
 
@@ -123,6 +125,7 @@ function loadXMLDoc() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             var text = xmlhttp.responseText;
             showMessage(text);
+            $('#spinner').hide();
         }
     }
     return false;
@@ -136,29 +139,33 @@ function loadXMLDoc() {
  *
  */
 function setupInputListeners() {
-	var el = document.getElementById('reset');
-	el.onclick = reset;
+    console.log("changes");
+    $('#reset').bind('click', function() {
+        reset();
+        console.log("changes");
+    });
 
-	$('#author').bind('propertychange change click keyup input paste', function() {
-		if($('#author').val() != "")
-    		$('#author').addClass( "valid" );
-    	else
-    		$('#author').removeClass( "valid" );
-	});
+    $('#author').bind('propertychange change click keyup input paste', function() {
+        console.log("changes");
+        if($('#author').val() != "")
+            $('#author').addClass( "valid" );
+        else
+            $('#author').removeClass( "valid" );
+    });
 
-	$('#email').bind('propertychange change click keyup input paste', function() {
-    	if(validateEmail( $('#email').val() ) )
-    		$('#email').addClass( "valid" );
-    	else
-    		$('#email').removeClass( "valid" );
-	});
+    $('#email').bind('propertychange change click keyup input paste', function() {
+        if(validateEmail( $('#email').val() ) )
+            $('#email').addClass( "valid" );
+        else
+            $('#email').removeClass( "valid" );
+    });
 
-	$('#text').bind('propertychange change click keyup input paste', function() {
-    	if($('#text').val() != "")
-    		$('#text').addClass( "valid" );
-    	else
-    		$('#text').removeClass( "valid" );
-	});
+    $('#text').bind('propertychange change click keyup input paste', function() {
+        if($('#text').val() != "")
+            $('#text').addClass( "valid" );
+        else
+            $('#text').removeClass( "valid" );
+    });
 }
 
 /**

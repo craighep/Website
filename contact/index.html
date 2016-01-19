@@ -15,6 +15,10 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/contact.css" rel="stylesheet">
     <link href="../css/footer.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src='../js/contact.js'></script>
 
 	<title>Craig Heptinstall | Contact</title>
 	
@@ -58,7 +62,7 @@
 	
 	<fieldset>	
 		<div id="contact_form">
-				<form name="contact" class="form-horizontal" onreset="setTimeout(function(){generateRandomness()},300);" onsubmit="return loadXMLDoc();" id="contact">
+				<form name="contact" class="form-horizontal" onsubmit="return loadXMLDoc();" id="contact">
 					<div class="form-group">
 					<label class="col-sm-4 control-label" for="author">Name:</label>  
 					<div class="col-sm-4">
@@ -74,17 +78,9 @@
 					<div class="col-sm-4">   
 					<textarea class="form-control required input_field" id="text" rows="3" name="text" required placeholder="Message contents here."></textarea>
 					</div></div>
-					<div class="form-group" id="contactFail">
-					<label class="col-sm-4 control-label" for="text"></label>
-					<div class="col-sm-4">  
-					<label class="col-sm-4 control-label" for="text"></label>
-					</div></div>
 					<div class="form-group">
-					<label class="col-sm-4 control-label" for="text">Spam test:</label>
-					<div class="col-sm-4">  
-					<input id='testSpam' name='testSpam' class="form-control input-md" type='text' readonly='readonly' value=''/>
-					<input id='spamAnswer' name='spamAnswer' class="form-control input-md" type='text' required='required'/>
-					</div>
+					<label class="col-sm-4 control-label" for="text"></label>
+					<div class="g-recaptcha col-sm-4" data-sitekey="6Lef-QYTAAAAADthPqJAQwL6DdHJrOGfamA9iPH8"></div>
 					</div>
 					
 				<div class="form-group" id="replaceme">
@@ -96,161 +92,17 @@
 					<label class="col-sm-4 control-label" for="submit"></label>
 					<div class="col-sm-4">
 						<button id="submit" name="submit" class="btn btn-success">Submit</button>
-				
 						<button id="reset" type="reset" name="reset" class="btn btn-danger">Reset</button>
+            <img src="../images/spinner.gif" id="spinner"/>
 					</div>
 				</div>
 			</form>
+      <div id="thanks">
+        <p>Thanks for getting in touch. I usually reply within the hour!</p>
+        <p>Want to send another message? <a id="newlink" href="#">Then click here.</a></p>
+      </div>
 		</div>
 		</fieldset>	
-		<script type="text/javascript">	
-		
-						function writenew()
-						{
-							$("#contact_form").load("form.txt");
-							setTimeout(reset, 1000);
-							var elem = document.getElementById("testSpam");
-							document.contact.testSpam.readOnly = true;
-						}
-						//-------------------------------------------------------------------------
-						// Function for generating random matsh question
-						//-------------------------------------------------------------------------
-						function generateRandomness()
-						{
-							var possibleAns = 1;
-							var random = 9;
-							var ran_operator = Math.floor((Math.random()*3)+0);
-
-							var random1 = Math.floor((Math.random()*random )+0);
-							var random2 = Math.floor((Math.random()*random )+0);
-							var operator = "";
-
-							switch (ran_operator)
-							{
-								case 0:  operator = "+"; break;
-								case 1:  operator = "-"; break;
-								default: operator = "+"; break
-							}
-							
-							document.contact.testSpam.readOnly = false;
-							document.getElementById("testSpam").value='What is ' + random1 + ' ' + operator + ' ' + random2 + ' ?'; 
-							document.contact.testSpam.readOnly = true;
-							document.getElementById("spamAnswer").value='';
-							document.getElementById("replaceme").style.display='none';
-						}
-						//-------------------------------------------------------------------------
-						// Function for creating spam tests
-						//-------------------------------------------------------------------------
-						window.onload=function()
-						{
-							generateRandomness();
-							var elem = document.getElementById("testSpam");
-							document.contact.testSpam.readOnly = true;
-						}
-						//-------------------------------------------------------------------------
-						// Function for resetting after successful send
-						//-------------------------------------------------------------------------
-						function reset()
-						{
-							document.getElementById("email").value='';
-							document.getElementById("author").value='';
-							document.getElementById("text").value='';
-							generateRandomness();
-							return false;
-						}
-						//-------------------------------------------------------------------------
-						// Function for hiding or showing contact form
-						//-------------------------------------------------------------------------
-						var state = 1;
-						function open_close (fail_bool)
-						{
-							var element_id = "contact_form"; 
-							var fail = "replaceme";
-							
-							if (fail_bool == 0)
-							{
-								if ( state == 0 )
-								{
-									state = 1;
-									document.getElementById( element_id ).style.display = 'block';
-								}
-								else
-								{
-									state = 0;
-									document.getElementById(element_id).innerHTML="Thanks for getting in touch.<br /><em>I'll get back to you as soon as possible!</em><br /><br />	<a id='newlink' href='#'>Click here to send another message.</a>";
-									var el = document.getElementById('newlink');
-									el.onclick = writenew;
-								}
-							}
-							else if (fail_bool == 1)
-							{
-								document.getElementById( fail ).style.display = 'block';
-								document.getElementById( fail ).style.color = 'red';
-								document.getElementById("replaceme").innerHTML="<label class='col-sm-4 control-label' for='email'></label>"+  
-								"<div class='col-sm-4'>"+
-								"Get away spammer!</div>"
-							}
-							else 
-							{
-								document.getElementById( fail ).style.display = 'block';
-								document.getElementById( fail ).style.color = 'red';
-								document.getElementById("replaceme").innerHTML="<label class='col-sm-4 control-label' for='email'></label>"+  
-								"<div class='col-sm-4'>"+
-								"Incorrect spam answer!</div>"
-							}
-						}
-						
-						//-------------------------------------------------------------------------
-						// Function for sending and receiving contact form stuff. (Look mum, Ajax!)
-						//-------------------------------------------------------------------------
-						function loadXMLDoc()
-						{
-							var xmlhttp;
-							
-							if (window.XMLHttpRequest)
-							  {// code for IE7+, Firefox, Chrome, Opera, Safari
-								xmlhttp=new XMLHttpRequest();
-							  }
-							else
-							  {// code for IE6, IE5
-								xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-							  }
-							  
-							  var the_data = 'email='+document.getElementById("email").value +
-											'&author='+document.getElementById("author").value +
-											'&text='+document.getElementById("text").value +
-											'&question='+document.getElementById("testSpam").value +
-											'&answer='+document.getElementById("spamAnswer").value;
-
-							xmlhttp.open("POST","PHPformEmailResults.php",true);
-							xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-							xmlhttp.send(the_data); // form data here!
-
-							xmlhttp.onreadystatechange=function()
-							{
-							  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-								{									
-									var text = xmlhttp.responseText;
-									if (text == "Thanks for getting in touch")
-									{
-										reset();
-										open_close(0);
-									}
-									else if ( text == "Spam" )
-									{
-										generateRandomness();
-										open_close(1);
-									}
-									else
-									{
-										generateRandomness();
-										open_close(2);
-									}
-								}
-							}
-							  return false;
-						}
-				</script>
 		</div>
 		
 		 <div class="container">
@@ -258,7 +110,7 @@
 		  <!-- START THE FEATURETTES -->
 		  <div class="row featurette">
 		  <div class="col-md-5">
-			 <h4>Contact Alternatives</h4><strong>Phone: 07871856691</strong><br />
+			 <h4>Contact Alternatives</h4><strong>Phone: <a href="tel:07871856691"><img src="../images/phone.png"/></a></strong><br />
 			<strong>Email:</strong> <a href=
 			"mailto:crh13@aber.ac.uk">crh13@aber.ac.uk</a><br />
 			<br />
@@ -310,7 +162,6 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 	<script src="../js/docs.min.js"></script>
 	<script>
