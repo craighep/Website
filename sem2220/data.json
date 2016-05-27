@@ -1,0 +1,53 @@
+{
+"wordpairs": [{
+"wordPhraseOne": "ladder",
+"wordPhraseTwo": "ysgol",
+"note": "climbing",
+"type": "noun"
+}, {
+"wordPhraseOne": "school",
+"wordPhraseTwo": "ysgol",
+"note": "education",
+"type": "noun"
+}, {
+"wordPhraseOne": "slow",
+"wordPhraseTwo": "araf",
+"note": "travelling",
+"type": "verb"
+}, {
+"wordPhraseOne": "april",
+"wordPhraseTwo": "embrill",
+"note": "month of the year",
+"type": "noun"
+}, {
+"wordPhraseOne": "bus",
+"wordPhraseTwo": "bws",
+"note": "a way to get around",
+"type": "noun"
+}, {
+"wordPhraseOne": "e-mail",
+"wordPhraseTwo": "e-bost",
+"note": "form of communication",
+"type": "unknown"
+}, {
+"wordPhraseOne": "taxi",
+"wordPhraseTwo": "allan",
+"note": "a way to travel",
+"type": "noun"
+}, {
+"wordPhraseOne": "thank you",
+"wordPhraseTwo": "diolch",
+"note": "thanks",
+"type": "verb"
+}, {
+"wordPhraseOne": "union",
+"wordPhraseTwo": "undeb",
+"note": "education",
+"type": "noun"
+}, {
+"wordPhraseOne": "university",
+"wordPhraseTwo": "prifysgol",
+"note": "education",
+"type": "noun"
+}]
+}

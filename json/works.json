@@ -68,7 +68,7 @@
       "short": "Java Hunter game",
       "description": "So starting at Aberystwyth university, the very first assignment I began was not a graphical one, but a simple command line one. This game &lsquo;Cross the square&rsquo; was intended to allow users to move a player around a 12 by 12 board on the screen avoiding the path of the &lsquo;hunters&rsquo; . The target was for the play to allow as many as possible hunters to get to their destination without touching them. Each Hunter gave a point when it got home and when it hit the player the player lost one of five lives. There were two levels to this game, one achieved when the user hit a score of 42, and after this the hunters became smarter and knew where the player was. This meant they headed towards the player. Because it was a command line game, directions were given by entering a certain key and then pressing enter. At this point, I was really wanting to get on with GUI but as the project said, it was a command line game. I achieved a 1st at this piece of work, and can be found in the link below within a zip file. Similar to an earlier piece of work, 'javac' it first, then java run the &ldquo;Game&rdquo; file in the source folder. ",
       "date": "December 20th 2011",
-      "score": "63% (2:1)",
+      "score": 63,
       "module": "Java Individual Project- Hunter Game",
       "link": "",
       "languages": [
@@ -79,8 +79,8 @@
       "name": "Web Project- Personal Basic Website(And WordPress)",
       "short": "Personal website and wordpress blog",
       "description": "Well, as you can see here, I have already implemented, and quite successfully actually, my new found HTML skills in which I produced a website with for this and for an earlier project in my web module for my second semester.In this site, I had to prove my HTML and Javascript skills. Along with this website, I also had to create a wordpress website from scratch including setting up the wordpress files and adding plug-in etc. I found all this basic stuff, and enjoyed the HTML programming especially. The wordpress link is below, which I found has been a very popular site with friends. I used this as a mini night project where I updated the goings on of my flat daily. Got over 15,000 hits to date! ",
-      "date": "Score: 96% (1st)",
-      "score": "96% (1st)",
+      "date": "March 1st 2012",
+      "score": 96,
       "module": "CS15010 - Web Development Tools",
       "link": "http://users.aber.ac.uk/crh13/wordpress",
       "languages": [
@@ -94,7 +94,7 @@
       "short": "Java class diagram creator",
       "description": "Earlier this calender year I along with two others from my tutor group was asked to work in a team to create a rather sophisticated Java program allowing users to design a UML diagram within it and then export this, save and load it. It meant users would first create a class box, insert information, and then link this to other class boxes. Each box could be freely moved around with the mouse edited and removed! After achieving a 1st for this project, we were very happy with the finished product. Check it out below, the ZIP file contains the Java files, Jar release and documentation. ",
       "date": "March 1st 2012",
-      "score": "75% (1st)",
+      "score": 75,
       "module": "CS12420 - Software Development",
       "link": "",
       "languages": [
@@ -106,7 +106,7 @@
       "short": "Java Till system",
       "description": "A project in an individual format, in which I was asked to create a billing system for a company named &lsquo;aberPizza&rsquo;. In this program (Java) I would need to allow users to enter a name, select a different set of items, (drinks, sides, pizzas), and then add any amount of quantities of each in the order. They would then be able to calculate the total price, input money tendered and then get a change amount, along with an exported receipt in the form of a txt file. In my program I also included a save/ load function for saving a till in its current state, and then load it later. A set of offers was also available to the users where when a certain item and another item was present in the order, some costs were deducted. I found this program rather tricky, especially when calculating the offer deductions. Away from that snag, I did achieve a 1st in this piece of work. Below my program (in GitHub) is in two formats, one as the double clicking executional Jar file, and the other is a Zip of the whole project with documentation. ",
       "date": "May 1st 2012",
-      "score": "68% (2:1)",
+      "score": 68,
       "module": "CS12420 - Software Development",
       "link": "",
       "languages": [
@@ -118,7 +118,7 @@
       "short": "PHP Webshop",
       "description": "This was another great web project I was glad to have the chance to work on. The main task here was to create a simple online shop using primarily PHP and SQL. The site was made to gather a list of products hosted on the University network, which I then gained a list of using some short SQL SELECT statements, and then display on the site. The users would then be able to add to basket, which would be saved for the session the site was being used. Once users had selected their desired items, the site then allowed the process of checking out, which again was PHP based. I learnt great amounts about the use of Sessions and Cookies in this project and also the use of CSS to make a simple but eye appealing web- shop.",
       "date": "October 30th 2012",
-      "score": "84% (1st)",
+      "score": 84,
       "module": "CS25020 - Web Development Tools",
       "link": "",
       "languages": [
@@ -134,7 +134,7 @@
       "short": "Assembly bit rotation",
       "description": "During my second year of study, I was introduced to the assembly language, and was given an assignment to create a small routine that would perform a right-rotate on a set of bits. The idea was that the end bit on a line of bits would drop off the end, and then be placed at the beginning of the line on the left hand side. Although I did manage to create a method to do this, the feedback given back to me was that I had not done it in a way as specified in the brief, so was marked down. Even considering this, I found that I enjoyed learning the basics of assembly (AND, NOR, OR, NOR, NAND gates etc.) and how integrate and fine low level languages can be, even using simple on/off methods.",
       "date": "November 25th 2012",
-      "score": "48% (3rd)",
+      "score": 48,
       "module": "CS25410 - Computer Architecture and Hardware",
       "link": "",
       "languages": [
@@ -146,7 +146,7 @@
       "short": "Java algorithm- Word ladder",
       "description": "This was an assignment intended to test my new knowledge of creating efficient algorithms with the purpose of sifting through and using stored data. I created a program that had the ability to link and create word ladders. For instance, my program had the ability to calculate shortest routes between words, where each move meant only changing one letter at a time until the word turned into another. There was also functionality that meant the user could input a word and then specify a word ladder length, then the program would attempt to make a ladder of words. This assignment heavily tested my knowledge of more advanced storage techniques, such as hash-maps/ hash-tables etc. This is a great fun little program, definitely worth a look! I should also mention that I used the Linux system dictionary file as the basis for all the word definitions used in the program, so the ladders are impressive! ",
       "date": "Java Individual Project- Word Ladder (Complex Algorithm) Calculator ",
-      "score": "65% (2:1)",
+      "score": 65,
       "module": "CS21120 - Program Design, Data Structures and Algorithms",
       "link": "",
       "languages": [
@@ -158,7 +158,7 @@
       "short": "C Race monitor",
       "description": "This was my first go at one of the C language family. I was set a task to create a way of monitoring a set of track races, considering participants, tracks and courses. The main purpose of this task was to learn the basic in's and out's of C, using the fundamental rules of the language. For instance, the basic storage and entry of races required dynamically increasing/ decreasing the arrays storing data. Because I found C not to have specific dynamic storage types, it helped me understand key functions such as realloc(), allowing reallocation of memory within programs. ",
       "date": "December 19th 201",
-      "score": "71% (1st)",
+      "score": 71,
       "module": "CS23710 - C and UNIX Programming",
       "link": "",
       "languages": [
@@ -171,7 +171,7 @@
       "short": "Java EE Group game",
       "description": "This was a major project I took part in alongside a team of 7 other students, and the main aim was to create a Java based web program that would allow users to control virtual 'monsters' with which they could trade, breed and fight with other users. Not only was there interaction, but virtual currency, registration, and even the ability to interact with other groups' programs using a common API. As part of my team I acted as deputy leader to the group, and also head of testing. This was a great project to learn how to work as a team, and gave me a great deal of experience, confidence in teams, and gave me a chance to tinker with JavaEE.",
       "date": "Febuary 18th 2013",
-      "score": "79% (1st)",
+      "score": 79,
       "module": "CS22120 - The Software Development Life Cycle",
       "link": "",
       "languages": [
@@ -201,7 +201,7 @@
       "short": "SQL Postgres implementation",
       "description": "This assignment was the first of the second semester handed to me and asked of me to take a data form, find out the different data types and sets, organise and normalise these, resulting eventually in a full SQL implementation of the data using Postgres. For the design, normalisation and implementation stages in this project I achieved an A grade. I was very happy with the ease of learning SQL, and is definitely going to be a useful tool in the future of my career. Once I had managed to install Postgres, it was all plain sailing in terms of creating tables, searching tables or adding any extra functional requirements such as checks on data.",
       "date": "April 1st 2013",
-      "score": "70+% (1st)",
+      "score": 75,
       "module": "CS27020 - Modelling Persistant Data",
       "link": "",
       "languages": [
@@ -213,7 +213,7 @@
       "short": "HCI Booking site",
       "description": "This project concerned more towards the usability of Web sites and software. I was given a brief, which asked of me to evaluate a set of user requirements, design and implement a site which would not have functionality, but instead simply show the interaction and ways the site would be used. Although my assignments specification said that the site did not have to be full on beautifully implemented and allowed me to use dreamweaver to quickly make the site, I instead chose to go for the full monty and create the site through CSS and HTML. I think I achieved a great looking site which you can view using the link. The report is also on GitHub. ",
       "date": "April 28th 2013",
-      "score": "61% (2:1)",
+      "score": 61,
       "module": "CS22310 - User Centered Design and Human Interaction",
       "link": "http://users.aber.ac.uk/crh13/hotelbooking",
       "languages": [
@@ -226,7 +226,7 @@
       "short": "C, C++, Java Race Monitor",
       "description": "This assignment was designed for me to build upon the knowledge I had gained from lectures in the C and C++ llangauges along with the use of previoous assignment I had completed In Java. I was asked to extend the Java version by creating specific modules in the different languages availible. The C++ language section to create files for an event, C to monitor and update checkpoint files, and Java to monitor results and the overall event information. This assignment was coupled alongside a report, which asked me to simply discuss my choices and assumptions of each of the languages. You will find all the source code, and report in the GitHub link below.",
       "date": "May 2nd 2013",
-      "score": "75% (1st)",
+      "score": 75,
       "module": "CS22510 - C++, C and Java Programming Paradigms",
       "link": "",
       "languages": [
@@ -240,7 +240,7 @@
       "short": "Javascript game",
       "description": "This assignment covered my entire Interactive Web Programming module, and including a report that detailed my design and implementation reasons. I achieved a 1st (80%) In the assignment which I was extremely pleased with, although I did spend an amazing amount of time on this project because of my keen interest in it. The design of my game comprised of an escape the maze style, involving a block which had to be navigated around a map using the keyboard controls. It also included a set of alternative controls using mouse buttons, and the game itself had a range of menus to make gameplay and ease of use much better. I designed the level selection based from the angry birds level menu screens where it would inform you if a level had been done perfectly, done, or not done. Achievemnts and music was present in my game, along with saved progress for users repeat visits. I had an amazing time creating this project and are immensly proud of it!",
       "date": "May 3rd 2013",
-      "score": "80% (1st)",
+      "score": 80,
       "module": "CS25210 - Interactive Web Programmming",
       "link": "http://users.aber.ac.uk/crh13/iwp",
       "languages": [
@@ -255,7 +255,7 @@
       "short": "Scheduler Algorithm Paper",
       "description": "This piece of work I completed whilst at University concerns a paper (Research Paper) I wrote into a selection of different scheduling algorithms provided for a small Java simulator program for a range of processes which would test how different algorithms change the order and speed of completion of tasks similar to a CPU. In my paper I looked at algorithms such as First In First Out, the Lottery scheduler, the Prioirty Queue scheduler and the Shortest Job First Algoritm. I found out a lot about each of these algorithms and learnt how each performed under a different variety of tests. I achieved a 1st for this piece of work ( 73%) and was very happy with the results. The submission of this included my classes containing my algorithms, testing classes, a class diagram and a report detailing my findings... ",
       "date": "May 3rd 2013",
-      "score": "73% (1st)",
+      "score": 73,
       "module": "CS21120 - Program Design, Data Structures and Algorithms",
       "link": "",
       "languages": [
@@ -267,7 +267,7 @@
       "short": "Industrial year report",
       "description": "Following on from my year in industry (the blog can be found at the '/blog' page of this site), I was required to write a report detailing my experiences and what I had learned during the process of working for a company in the industry I will be aiming to work in after my degree. You will be able to see my final produced report, alongside the source for the document. This report was written in LaTeX, as I feel it looks more professional. There are various diagrams to display the strategies used in my day to day work, alongside the company layout. By looking at the document, I hope it will help you understand better what I did while away on my year in industry, and what I brought back with me to university in terms of skills and experience.",
       "date": "September 29th 2014",
-      "score": "67% (2:1)",
+      "score": 67,
       "module": "BB-N01- Industrial Year",
       "link": "https://github.com/craighep/Industrial-Year-Report",
       "languages": []
@@ -277,7 +277,7 @@
       "short": "Violia Jones vison paper",
       "description": "The first assignment In my fourth year of University involved researching, analysing and suggesting ways to use a face detection algorithm outlined in a scientific computer-vision paper. For my assignment, I was required to evaluate a paper looking at face-recognition, and to look at how using the techniques described in the paper would be useful in practical approaches such as people counting in a different range of events. Alongside the paper which you can find in the Github link below, you will also see a set of my own tests I attempted using the OpenCV library, in a set of Python files. I found this a very interesting assignment and module as a whole, and had a lot of fun trying out what is on offer in terms of today's technologies.",
       "date": "November 24th 2014",
-      "score": "63% (2:1)",
+      "score": 63,
       "module": "CS34110- Computer Vision",
       "link": "https://github.com/craighep/Viola-Jones-Computer-Vision-Paper",
       "languages": [
@@ -289,7 +289,7 @@
       "short": "Rails Cucumber testing",
       "description": "My most recent piece of work involved an existing application, the CSA (Computer sceince alumini) system. This was primarily written using the Ruby language, using the Rails framework. I had a few options in this assignment in terms of providing an assignment solution, but chose a new technology to try out; Cucumber and R-Spec tests. This meant writing out a good deal of functionality testing tests (these were written in the Gherkin and Ruby language) to a total of 95. Alongside this, you can find my report in the Github link below (including the code), and also links to my Travis build server in the Github readme. I had a great deal of fun learning both a new framework to me, and also new means of testing software applications. As this was handed in recently, please check back later for the score I achieved on this assignment!",
       "date": "December 8th 2014",
-      "score": "87% (1st)",
+      "score": 87,
       "module": "SE31520- Developing Internet Applications",
       "link": "https://github.com/craighep/csa",
       "languages": [
@@ -302,7 +302,7 @@
       "short": "Dissertation (Major project)",
       "description": "My dissertation, also known as the final year project (though I am an exception becuase of being on the MEng). My proejct intention was to create a WebGl based flight simulator that would allow for users to input short notation known as OLAN into the web application, and then have a 3D simulated view of the flight. This has been by far the largest project I have completed to date. Both the report and project itself can be found on Github, with the link to the actual running application below.",
       "date": "May 8th 2015",
-      "score": "",
+      "score": 53,
       "module": "CS38440- Major Project",
       "link": "https://craighep.github.com/Dissertation",
       "languages": [
@@ -334,7 +334,7 @@
       "short": "Artificial Intelligence Paper",
       "description": "A paper written discussing the ethical and emotional ties to the world of Artificial Intelligence. Three papers were used for the basis of the research, with each evauluated and critiqued. A general understanding of the field is provided, with some insight into the future of AI.",
       "date": "November 5th 2015",
-      "score": "73% (1st)",
+      "score": 73,
      "module": "SEM6120- Artificial Intelligence Fundamentals",
       "link": "https://github.com/craighep/Artificial-Intelligence-paper",
       "languages": [
@@ -345,11 +345,69 @@
       "short": "AI Travelling salesman",
       "description": "The second part of om Artificial Intelligence module, I was alsked to create an application that uses a set of different genertic algorithms to attempt to find the shortest routes in any given travelling salesman problem. I selected Java as the primary language to write this in, including a GUI and capabilites to read in any set of co-ordinates from a JSON file. The paper accompyning the code explains my choices for the mutation rates, selection and crossover techniques applied to find the best and quickest calculated routes.",
       "date": "December 9th 2015",
-      "score": "73% (1st)",
+      "score": 73,
      "module": "SEM6120- Artificial Intelligence Fundamentals",
       "link": "https://github.com/craighep/Artificial_Intelligence_GA_TSP",
       "languages": [
       	"java"
+      ]
+    },
+    {
+      "name": "JavaEE, .NET, Fitbit and Jawbone Competition System",
+      "short": "Go Aber",
+	  "description": "The group project for my masters year. The task was to create a connection between a new application (written twice, using JavaEE and .NET) that would allow users to connect to Jawbone and Fitbit, and allow interaction and competitions between users. Scoreboards, group systems, and API calls were all part of the task, and this was by far the hardest and most time consuming project of my degree.",
+      "date": "January 13th 2016",
+      "score": 73,
+      "module": "SEM5640 - Developing Advanced Internet-Based Applications",
+      "link": "https://github.com/cgddrd/GoAber/",
+      "languages": [
+      	"java",
+        "html",
+        "css",
+        "mobile-device",
+        "php",
+        "postgres",
+        "csharp"
+      ]
+    },
+    {
+      "name": "Hybrid Mobile Phone Application",
+      "short": "Hybrid conference app",
+      "description": "The first of three practical assignments creating mobile phone apps, this required me to use the phonegap build service to make and test a mobile application allowing users to view and navigate around a conference event. This used web languages, and was wrapped by phonegap to produce an APK file for use on phones.",
+      "date": "February 29th 2016",
+      "score": 80,
+     "module": "SEM2220- Mobile Solutions",
+      "link": "https://github.com/craighep/Conference_App",
+      "languages": [
+      	"phone-gap",
+        "mobile-device",
+      	"javascript",
+      	"css",
+      	"html"
+      ]
+    },
+    {
+      "name": "Click-Through Rate Prediction for Sponsored Search",
+      "short": "Click-Through Rate Prediction",
+      "description": "A paper written for my machine learning module, looking at the efficiency of Microsoft's Bing search engine click through rate prediction. An investigation into how it works, how well it works, and possible substitutes for the current algorithm. With no prior machine learning knowledge before this assignment, it gave me a great introduction to the a range of prediction algorithms.",
+      "date": "March 18th 2016",
+      "score": 66.5,
+     "module": "SEM6420- Machine Learning for Intelligent Systems",
+      "link": "https://github.com/craighep/Click-through-rate-prediction",
+      "languages": [
+      ]
+    },
+    {
+      "name": "iOS Aanguage Application",
+      "short": "iOS Langauge App",
+      "description": "The second of three practical assignments for this module, I was required to create an Iphone application that allowed users to create, edit and delete a list of English to Welsh translations. Alongside the use of CoreData, I had the opportunity to create lots of different iOS GUI elements, and try a complete whole new language, Swift.",
+      "date": "April 20th 2016",
+      "score": 75,
+     "module": "SEM2220- Mobile Solutions",
+      "link": "https://github.com/craighep/IOS_Language_App",
+      "languages": [
+      	"osx",
+        "iphone"
       ]
     }
   ]

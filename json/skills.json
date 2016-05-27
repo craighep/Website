@@ -2,111 +2,133 @@
   "skills": [
     {
       "language": "Java",
+      "mapping" : "java",
       "percentage": "85",
       "year-from": "2010"
     },
     {
       "language": "C",
+      "mapping" : "c",
       "percentage": "71",
       "year-from": "2012"
     },
     {
       "language": "C++",
+      "mapping" : "cplusplus",
       "percentage": "55",
       "year-from": "2013"
     },
     {
       "language": "C#",
+      "mapping" : "csharp",
       "percentage": "80",
       "year-from": "2012"
     },
     {
       "language": "Perl",
+      "mapping" : "",
       "percentage": "62",
       "year-from": "2012"
     },
     {
       "language": "HTML 5",
+      "mapping" : "html",
       "percentage": "96",
       "year-from": "2011"
     },
     {
       "language": "CSS 3",
+      "mapping" : "css",
       "percentage": "97",
       "year-from": "2011"
     },
     {
       "language": "SQL",
+      "mapping" : "postgres",
       "percentage": "75",
       "year-from": "2012"
     },
     {
       "language": "PHP",
+      "mapping" : "php",
       "percentage": "80",
       "year-from": "2011"
     },
     {
       "language": "ASP",
+      "mapping" : "",
       "percentage": "51",
       "year-from": "2011"
     },
     {
       "language": "Assembly",
+      "mapping" : "",
       "percentage": "48",
       "year-from": "2012"
     },
     {
       "language": "Haskell",
+      "mapping" : "",
       "percentage": "68",
       "year-from": "2011"
     },
     {
       "language": "Pascal",
+      "mapping" : "",
       "percentage": "78",
       "year-from": "2009"
     },
     {
       "language": "Unix",
+      "mapping" : "shell",
       "percentage": "62",
       "year-from": "2011"
     },
     {
       "language": "VB",
+      "mapping" : "",
       "percentage": "50",
       "year-from": "2009"
     },
     {
       "language": "Jquery",
+      "mapping" : "css",
       "percentage": "82",
       "year-from": "2012"
     },
     {
       "language": "XML",
+      "mapping" : "",
       "percentage": "90",
       "year-from": "2011"
     },
     {
       "language": "Javascript",
+      "mapping" : "javascript",
       "percentage": "98",
       "year-from": "2010"
     },
     {
       "language": "Ajax",
+      "mapping" : "",
       "percentage": "85",
       "year-from": "2012"
     },
     {
       "language": "Ruby (Rails)",
+      "mapping" : "ruby",
       "percentage": "35",
       "year-from": "2014"
     },
     {
       "language": "Python",
+      "mapping" : "python",
       "percentage": "48",
       "year-from": "2014"
     },
     {
       "language": "WebGL",
+      "mapping" : "",
       "percentage": "40",
       "year-from": "2015"
     }

@@ -71,7 +71,7 @@
 									<tr>
 										<td>
 											<fieldset>
-												<legend>CV PDF</legend> <div class="grow_cv pic_cv"><a href="../documents/cv.pdf"><img src=
+												<legend>CV PDF</legend> <div class="grow_cv pic_cv"><a href="CV.pdf"><img src=
 												"../images/PDFoff.png" height="70" width="70"
 												alt="image 04" class="image_wrapper image_fl_3 grown_cv" /></a></div>
 											</fieldset>
@@ -82,7 +82,7 @@
         <div class="col-md-6" role="main">
 			<h1>Specialized Skills</h1>
 				<p>Below this text, I have created a table of some of the languages that
-				I am proficient in. I have given an honest rating out of 100&#37; (Hover for year experience). <b>Scroll for more &#8595;</b></p>
+				I am proficient in. Percentages have been based from portfolio scores (Hover for year experience).</p>
 				<div id="service_box">
 					<div id ="service_ratings">
 					<?php
@@ -93,6 +93,10 @@
 						function random_color() {
 						    return random_color_part() . random_color_part() . random_color_part();
 						}
+
+						$string = file_get_contents("../json/works.json");
+			            $json_a = json_decode($string, true);
+			            $projects = array_reverse($json_a['works']);
 
 						$string = file_get_contents("../json/skills.json");
 			            $json_a = json_decode($string, true);
@@ -108,17 +112,34 @@
 								$year_str = '1 Year';
 							else
 								$year_str = $years . ' Years';
+
+							$percentage = 0;
+							$aggregate = 0;
+							foreach ($projects as $work => $project) {
+								if(in_array($skill["mapping"],$project["languages"]) && $project["score"] != ""){
+									$percentage += $project["score"];
+									$aggregate++;
+								}
+							}
+							if($aggregate == 0){
+								$percentage = $skill['percentage'];
+							}
+							else{
+								$percentage = $percentage / $aggregate;
+							}
+							$percentage = round($percentage);
 							
-							$html = "<div class='skillbar clearfix ' data-percent='".$skill['percentage']."'>".
+							$html = "<div class='skillbar clearfix ' data-percent='".$percentage."'>".
 									"<div class='skillbar-title' style='background: #".$randomColor.";'><span>".$skill['language']. "</span></div>".
 									"<div class='skillbar-title' style='background: #".$randomColor.";'></div>".
-									"<div class='skillbar-bar' style='width:".$skill['percentage']."%;background: #".$randomColor .";'><b>".$year_str."</b></div>".
-									"<div class='skill-bar-percent'>".$skill['percentage']. "&#37;</div></div>";	
+									"<div class='skillbar-bar' style='width:".$percentage."%;background: #".$randomColor .";'><b>".$year_str."</b></div>".
+									"<div class='skill-bar-percent'>".$percentage. "&#37;</div></div>";	
 							echo $html;
 						}
 					?>
 					</div>
 				</div>
+				<p><b>Scroll for more &#8595;</b></p>
 			</div>
 		</div>
 		<div class="row">

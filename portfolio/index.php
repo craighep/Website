@@ -70,8 +70,22 @@
                         $htmlNav = "";
                         foreach ($projects as $work => $project) {
                             $score = "N/A";
-                            if( $project["score"] != "" )
-                                $score = $project["score"];
+                            $scoreApp = "";
+                            if( $project["score"] != "" ){
+                                $rawScore = $project["score"];
+                                if($rawScore > 39 && $rawScore < 50){
+                                    $score = $project["score"]."% (3rd)";
+                                }
+                                else if($rawScore > 49 && $rawScore < 60){
+                                    $score = $project["score"]."% (2:2)";
+                                }
+                                if($rawScore > 59 && $rawScore < 70){
+                                    $score = $project["score"]."% (2:1)";
+                                }
+                                if($rawScore > 69){
+                                    $score = $project["score"]."% (1st)";
+                                }
+                            }
                             $html = "hi";
                             $html = '<div class="col-sm-12">'.
                                             '<div class="brdr bgc-fff pad-10 box-shad btm-mrg-20">'.
